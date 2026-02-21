@@ -13,7 +13,7 @@ RSS_FEEDS = {
     "Andrew Chen": "https://andrewchen.substack.com/feed",
 }
 
-DAYS = 7
+DAYS = 1
 MONTHS = {
     "JAN": 1, "FEB": 2, "MAR": 3, "APR": 4, "MAY": 5, "JUN": 6,
     "JUL": 7, "AUG": 8, "SEP": 9, "OCT": 10, "NOV": 11, "DEC": 12,
@@ -107,7 +107,7 @@ def build_markdown(all_articles, today):
     for source, articles in all_articles.items():
         lines.append(f"## {source}")
         if not articles:
-            lines.append("最近 7 天沒有新文章。")
+            lines.append("最近 24 小時沒有新文章。")
             lines.append("")
             continue
         lines.append("| 日期 | 標題 |")

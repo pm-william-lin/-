@@ -78,7 +78,7 @@ def test_build_markdown():
         ("# 文章摘要" in md, "缺少標題"),
         ("## Test Source" in md, "缺少來源標題"),
         ("[Test Article](https://example.com)" in md, "缺少文章連結"),
-        ("最近 7 天沒有新文章" in md, "缺少空來源提示"),
+        ("最近 24 小時沒有新文章" in md, "缺少空來源提示"),
         ("| 日期 | 標題 |" in md, "缺少表格標頭"),
     ]
     for ok, msg in checks:
