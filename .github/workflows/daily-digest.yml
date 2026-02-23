@@ -1,10 +1,8 @@
 name: Daily Article Digest
 
 on:
-  schedule:
-    # 每天早上 9 點（台灣時間 UTC+8 = UTC 01:00）
-    - cron: '0 1 * * *'
-  workflow_dispatch: # 允許手動觸發
+  # 排程已改由 n8n 透過 workflow_dispatch 準時觸發（台灣時間 09:00）
+  workflow_dispatch:
 
 jobs:
   fetch-articles:
